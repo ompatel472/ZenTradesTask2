@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Data Display</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 90%;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+      }
+      .pagination li {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin-left: 20px">Product Data Display</h1>
+
+    <table id="productTable">
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <ul class="pagination" id="pagination"></ul>
+
+    <script src="show.js"></script>
+  </body>
+</html>

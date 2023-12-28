@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+select {
+  width: 150px;
+  height: 25px;
+}
+
+.container {
+  margin-top: 20px;
+  padding: 5px;
+  display: flex;
+
+}
+.div1 {
+  width: auto;
+  height: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.043), 0 3px 10px 0 rgba(0, 0, 0, 0.116);
+  padding: 40px;
+  line-height: 2em;
+  font-weight: bold;
+  font-size: large;
+}

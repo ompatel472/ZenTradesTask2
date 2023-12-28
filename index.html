@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="upload.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Data Upload and Display</title>
+  </head>
+  <body class="container-fluid">
+    <h1 class="my-4 text-center">Data Upload and Display</h1>
+    <form id="uploadForm">
+      <div class="row d-flex justify-content-center">
+        <div class="col-5 card me-2 div1">
+          <div class="card-body">
+            <label class="me-1">Step 1 :</label>
+            <label for="fileInput">Choose a file:</label><br />
+            <div class="ms-5 mt-1">
+              <input
+                class="ms-4"
+                type="file"
+                id="fileInput"
+                accept=".json,.csv"
+              /><br />
+              <label class="ms-4 mt-3">Only .JSON And .CSV File</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 card div1">
+          <div class="card-body">
+            <label for="">Step-2 :</label>
+            <label for="fileInput">Specify Format</label><br />
+
+            <div class="ms-5 mt-1">
+              <label for="fileType" class="ms-4 me-5">File Type:</label>
+              <select id="fileType" class="ms-5">
+                <option value="json">JSON</option>
+                <option value="csv">CSV</option></select
+              ><br />
+
+              <label for="encoding" class="ms-4 me-2"
+                >Character Encoding:</label
+              >
+              <select id="encoding">
+                <option value="utf-8">UTF-8</option>
+                <option value="iso-8859-1">ISO-8859-1</option></select
+              ><br />
+
+              <label for="delimiter" class="ms-4">Delimiter (CSV only):</label>
+              <select id="delimiter">
+                <option value=",">,</option>
+              </select>
+              <br />
+
+              <label for="hasHeader" class="ms-4 me-3">File has Header :</label>
+              <input type="checkbox" id="hasHeader" class="ms-4" />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2 d-flex justify-content-center">
+        <div class="col-10 card div1">
+          <div class="card-body">
+            <input type="checkbox" id="displayHandling" /><label
+              for=""
+              class="ms-1"
+              >Step - 3:</label
+            >
+            <label for="displayHandling">Display Handling</label><br />
+            <div class="ms-5">
+              <label for="" class="ms-4"
+                >Select the fields to be displayed</label
+              ><br />
+              <table class="ms-3">
+                <tr class="text-center">
+                  <td><label for="displayFields">Available Fields:</label></td>
+                  <td></td>
+                  <td>
+                    <label for="selectedFields">Fields to be Displayed:</label
+                    ><br />
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td>
+                    <select
+                      id="displayFields"
+                      class="h-100 me-1"
+                      multiple
+                    ></select>
+                  </td>
+                  <td>
+                    <button type="button" id="addFields">&gt;&gt;</button
+                    ><br /><br />
+                    <button type="button" id="removeFields">&lt;&lt;</button>
+                  </td>
+                  <td>
+                    <select id="selectedFields" class="h-100" multiple></select>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-10">
+          <div class="mt-4 float-end">
+            <button type="button" id="nextButton" class="btn btn-success">
+              Next
+            </button>
+            <button class="btn text-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="upload.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
